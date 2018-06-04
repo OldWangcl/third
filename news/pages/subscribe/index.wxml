@@ -1,0 +1,9 @@
+ <view class="info_choose ">
+        <view class="catalog_name">花色</view>
+
+        <view class="catalog_items display-flex-row" >
+          <block wx:for="{{catalogs}}">
+            <text data-select="{{item.select}}" class="{{item.select == catalogSelect ? 'active':''}} catalog_item" bindtap="chooseCatalog">{{item.catalogName}}</text>
+          </block>
+        </view>
+    </view>

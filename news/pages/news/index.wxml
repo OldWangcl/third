@@ -1,0 +1,12 @@
+<view>
+  <!--头部导航 start -->
+  <view class='header'>
+    <scroll-view class='sv_container' scroll-x='true'>
+      <block wx:for='{{categoryTabs}}' wx:for-item='item' wx:key="lanmu_id">
+        <view class="sv_item" style='{{currentTab==item.lanmu_id ? "color:red;":""}}'  bindtap='changeCategory' data-id='{{item.lanmu_id}}'>{{item.lanmu_name}}</view>
+      </block>
+    </scroll-view>
+    <image bindtap='manageTabs' class='sv-manager' src='../../images/icon-manage.png'></image>
+  </view>
+   <!--头部导航 end -->
+</view>

@@ -1,0 +1,23 @@
+<view class='container'>
+  <view class='head' bindtap='onUserImgTap' data-src='{{userAvatarUrl}}'>
+    <open-data type='userAvatarUrl'></open-data>
+  </view>
+  <view class='name'>
+     姓名：<open-data type='userNickName'></open-data>
+  </view>
+  <view class='name'>
+     性别：<open-data type='userGender'></open-data>
+  </view>
+  <view class='name'>
+     所在城市：<open-data type='userCity'></open-data>
+  </view>
+  <view class='name'>
+     所在省份：<open-data type='userProvince'></open-data>
+  </view>
+  <view class='name'>
+     国籍：<open-data type='userCountry'></open-data>
+  </view>
+  <view class='name'>
+     语言：<open-data type='userLanguage'></open-data>
+  </view>
+</view>

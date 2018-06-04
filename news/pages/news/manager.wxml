@@ -1,0 +1,30 @@
+<view class='containers'>
+  <view class='manage'>
+    <view class='manage_hd'>
+      <text class='manage_title'>我的频道</text>
+      <text class='manage_tips'>点击删除频道</text>
+    </view>
+    <view class='manage_bd'>
+      <block wx:for="{{categorys}}" wx:key="lanmu_id" wx:if="{{item.selected}}">
+        <view catchtap='delecteCategory' data-key="{{index}}" data-id="{{item.lanmu_id}}" class='manage_tag'>{{item.lanmu_name}}</view>
+      </block>
+    </view>
+  </view>
+  <!--end  -->
+  <view class='manage'>
+    <view class='manage_hd'>
+      <text class='manage_title'>全部频道</text>
+      <text class='manage_tips'>点击添加频道</text>
+    </view>
+    <view class=' manage_bd'>
+      <block wx:for="{{categorys}}" wx:key='lanmu_id'>
+        <view catchtap='addCategory' data-key="{{index}}" data-id="{{item.lanmu_id}}" class="manage_tag {{item.selected?'active':''}}">{{item.lanmu_name}}</view>
+      </block>
+    </view>
+  </view>
+  <!--end  -->
+  <view class='btn_control'>
+    <button bindtap='selectAll' type='default' class='btn_control_mini'>全部选择</button>
+    <button bindtap='returnIndex' type='primary' class='btn_control_mini'>返回首页</button>
+  </view>
+</view>
