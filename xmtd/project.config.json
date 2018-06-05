@@ -58,6 +58,12 @@
 					"name": "e",
 					"pathName": "pages/main/More/More",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "column",
+					"pathName": "pages/main/expect/expect",
+					"query": ""
 				}
 			]
 		}

@@ -13,7 +13,8 @@ Page({
     // length:'',
     popular_value:'' ,//人气值
     add:'',
-    deleted:''
+    deleted:'',
+    kfhidden: '分享好友'
   },
   // 跳转到精选界面
   onMoreTap: function () {
@@ -25,12 +26,17 @@ Page({
   onCollectionTap: function (e) {
     var that = this;
     var openid = wx.getStorageSync('openid');
-    var txt = e.currentTarget.dataset.txt;
+    var txt = e.currentTarget.dataset.txt; //标题
+   
     var img = e.currentTarget.dataset.img;
-    var cid = e.currentTarget.dataset.cid;
+    var cid = e.currentTarget.dataset.cid; //页面cid
+    
     var index = e.currentTarget.dataset.index;
     var time = util.formatTime(new Date());
-    var value = e.currentTarget.dataset.value;
+    console.log(889);
+    console.log(time); 
+    var value = e.currentTarget.dataset.value; //人气值
+    
     // var timeing = e.curretTarget.dataset.timeing;
     // wx.setStorageSync('tu', img);
     // wx.setStorageSync('biaoti', txt);
@@ -122,7 +128,19 @@ Page({
     // })
     
   },
-  
+  // 打赏功能
+  onExpectTap:function(e){
+    var cid = e.currentTarget.dataset.cid;
+    var txt = e.currentTarget.dataset.txt;
+    var value = e.currentTarget.dataset.value;
+    var time = e.currentTarget.dataset.time;
+    console.log(998);
+    console.log(time);
+    wx.navigateTo({
+      url: '../expect/expect?cid=' + cid + '&txt=' + txt + '&value=' + value + '&time=' + time
+    })
+    // console.log('../expect/expect ? cid = ' + cid + ' & txt=' + txt + ' & value=' + value + ' & time=' + time);
+  },
   // 点赞功能
   bindLikeTap:function(e){
     var that = this;
@@ -140,7 +158,7 @@ Page({
         var openid = wx.getStorageSync('openid');
         console.log(openid,"68797");
         var time = res.data;
-        // console.log(time,"9999");
+        console.log(time,"9999");
         var numbers = time['ctimes'];
         // console.log(numbers,"898248");
         // console.log(that.data.popular_value,"66666");
@@ -197,6 +215,35 @@ Page({
     // console.log(uptime,"928384");
     this.setData({
       update_time: uptime
+    })
+    var that = this;
+    wx.request({
+      url: 'https://295u.cn/api/XcxKeysGet.html',
+      data: {
+        openid: wx.getStorageSync('openid'),
+        appid: 'wx1156b60f7bba1f91'
+      },
+      header: {
+        'content-type': 'application/json'
+      },
+      success: function (res) {
+        if (res.data != '') {
+          // var aa = res.data.split('oaHTaGaVmmhlnmg=');
+          var arrs = res.data;
+          console.log(arrs, "23472");
+          console.log(arrs['key6'], "8889");
+          if (arrs['key6'] === that.data.kfhidden) {
+            that.setData({
+              kfhidden: true
+            })
+          } else {
+            that.setData({
+              kfhidden: false
+            })
+          }
+        }
+      }
+
     })
     this.requestTap(); //传递参数到数据库
     // this.bindLikeTap();

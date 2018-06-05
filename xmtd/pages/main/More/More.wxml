@@ -24,6 +24,7 @@
         <view class='button-left button-general' catchtap='onCollectionTap' data-txt='{{contentUrls.txt}}' data-img='{{contentUrls.img}}' data-index='{{contentUrls}}' data-txt='{{contentUrls.txt}}' data-cid='{{contentUrls.cid}}' data-value='{{popular_value}}' data-timeing='{{update_time}}'>收藏</view>
         <view class='button-middle button-general' bindtap='bindLikeTap'>点赞</view>
         <button class='button-right button-general' open-type="share" data-img='{{contentUrls.img}}' data-name='{{contentUrls.txt}}'>分享</button>
+        <view class='button-middle button-general' wx:if='{{kfhidden}}' data-cid='{{contentUrls.cid}}' data-value='{{popular_value}}' data-txt='{{contentUrls.txt}}' data-time='{{update_time}}' catchtap='onExpectTap'>打赏</view>
       </view>
     </view>
     <!--three 按钮 end -->

@@ -1,0 +1,37 @@
+<view class='expect'>
+  <view class='box'></view>
+  <view class='btn'>
+    <text class='wen'>文</text>
+  </view>
+  <view class='amount'>
+    <text class='poor'>
+    {{poor}}
+    {{poors}}
+    </text>
+    <view class='money' >
+      <block wx:for='{{money}}'>
+        <view class='money-btn' bindtap='onPoorTab' data-money='{{item}}'>
+          <text>{{item}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+  <!--更多图文  -->
+  <view class='border'>
+    <view class='left'>
+      <view class='left-img'>
+        <image src='../../../images/icon/more.png'></image>
+      </view>
+      <view class='left-text' bindtap='onMoreTap'>
+        <text>更多图文</text>
+      </view>
+      <view class='left-line'></view>
+    </view>
+    <view class='right'>
+      <view class='right-img'>
+        <image src='../../../images/icon/forwarding.png'></image>
+      </view>
+      <button class='right-text' open-type='share'>分享好友</button>
+    </view>
+  </view>
+</view>

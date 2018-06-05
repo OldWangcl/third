@@ -4,6 +4,7 @@
     "pages/column/column",
     "pages/collection/collection",
     "pages/main/More/More",
+    "pages/main/expect/expect",
     "pages/column/column-main/column-main"
 
   ],

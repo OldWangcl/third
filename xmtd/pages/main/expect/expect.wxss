@@ -1,0 +1,122 @@
+/* pages/main/expect/expect.wxss */
+page{
+    background: #FBE9FE;
+}
+.expect{
+  background: #FBE9FE;
+
+}
+.box{
+  width: 100%;
+  height: 350rpx;
+  /* border: 1px solid #000; */
+  border-radius: 50%;
+  margin-top: -165rpx;
+  background-color:#F5F5DC;
+    position: relative;
+  /* border-bottom-left-radius: 300rpx;
+   border-bottom-right-radius: 300rpx;  */
+}
+.btn{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  /* border: 1rpx solid #000; */
+  position: absolute;
+  top: 104rpx;
+  left: 300rpx;
+  background-color: #FFDAB9;
+}
+.wen{
+  text-align: center;
+  line-height: 150rpx;
+  margin-left: 46rpx;
+  color: #F08080;
+  font-size: 60rpx;
+  font-weight: bold;
+}
+.amount{
+  width: 100%;
+  /* height: 800rpx; */
+  margin-top: 80rpx;
+  /* border: 1px solid #000; */
+}
+.poor{
+  display: flex;
+  flex-direction: column;
+  margin-left: 280rpx;
+  color: 	#A9A9A9;
+  font-size: 30rpx;
+  margin-bottom: 20rpx;
+}
+.money{
+  margin-top: 60rpx;
+  margin-left: 120rpx;
+  margin-right: 55rpx;
+  
+  
+}
+.money-btn{
+  border: 1px solid #EEB3CA;
+  text-align: center;
+  width: 100rpx;
+  height: 50rpx;
+  display: inline-block;
+  border-radius: 10rpx;
+  padding: 15rpx 10rpx;
+  margin:25rpx 24rpx;
+}
+/*固定定位 start  */
+.border{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  /* border: 1rpx solid #000; */
+  border-top-left-radius: 40rpx;
+  border-top-right-radius: 40rpx;
+  border-bottom-left-radius: 40rpx;
+  border-bottom-right-radius: 40rpx;
+  width: 555rpx;
+  height: 70rpx;
+  margin-left: 90rpx;
+  margin-bottom: 10rpx;
+  box-shadow:0px 0px  10rpx 5rpx #aaa;
+  display: flex;
+  flex-direction: row;
+}
+.left, .right{
+  display: flex;
+  flex-direction: row;
+  margin: 10rpx 0 10rpx 30rpx;
+}
+.left-img image, .right-img image{
+  width: 45rpx;
+  height: 45rpx;
+  margin-right: 15rpx;
+}
+.left-text, .right-text{
+  font-size: 34rpx;
+}
+.left-line{
+   border-left: 1rpx solid #EAEAEB; 
+   margin-left: 45rpx;
+  /* border-left: 1rpx solid #000; */
+  height: 70rpx;
+  width: 1rpx;
+}
+.right-text{
+  color: #C54239;
+  height: 70rpx;
+  background-color: #fff;
+  margin-top: -9rpx;
+  padding-right: 10rpx;
+  line-height: 70rpx;
+  text-align: left;
+  /* margin-right: 10rpx; */
+}
+.right-text::after{
+  border: 0;
+}
+
+/*固定定位 end  */

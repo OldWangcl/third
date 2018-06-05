@@ -55,11 +55,12 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-left: 30rpx;
   /* background-color: #000; */
 }
 .button-general{
   /* border: 1rpx solid #000; */
-  width: 185rpx;
+  width: 145rpx;
   height: 75rpx;
   color: #fff;
   line-height: 75rpx;
