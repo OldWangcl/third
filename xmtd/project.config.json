@@ -1,0 +1,65 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": false,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.0.0",
+	"appid": "wx1156b60f7bba1f91",
+	"projectname": "xmtd",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "column",
+					"pathName": "pages/column/column",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "collection",
+					"pathName": "pages/collection/collection",
+					"query": ""
+				},
+				{
+					"id": 2,
+					"name": "c",
+					"pathName": "pages/column/column-main/column-main",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "e",
+					"pathName": "pages/main/More/More",
+					"query": ""
+				}
+			]
+		}
+	}
+}

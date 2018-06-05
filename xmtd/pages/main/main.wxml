@@ -1,0 +1,36 @@
+<view class='wrap'>
+  <!--swiper start  -->
+  <view class='swiper'>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular='{{circular}}'>
+      <block wx:for='{{contentUrls}}' wx:for-item='item' wx:key='*this'>
+        <swiper-item catchtap='onMoreTap' data-id='{{item.cid}}' data-index='{{item.txt}}'>
+          <image src='{{item.img}}'  mode='aspectFill'></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!--swiper end  -->
+  <!--ad start  -->
+  <view class='ad' wx:if='{{hidden}}'>
+    <view class='ad-content'>广告</view>
+  </view>
+  <!--ad end  -->
+  <!--内容 start  -->
+  <view class='content'>
+    <view class='content-first' wx:for='{{contentUrls}}' wx:for-item='items' catchtap='onMoreTap' data-index='{{items.txt}}' wx:key='index' data-id='{{items.cid}}' data-img='{{items.img}}'>
+      <image src='{{items.img}}' class='content-img' mode='aspectFill'>
+      </image>
+      <view class='content-text'>
+          <text class='text'>{{items.txt}}</text>
+        </view>
+    </view>
+  </view>
+  <!--内容 end  -->
+  <!--刷新按钮 start  -->
+  <!--刷新按钮 end  -->
+  <view class='refresh' bindtap='onRefreshTap'>
+    <view class='refresh-bgc'>
+      <image src='../../images/icon/refresh.png' class='refresh-img'></image>
+    </view>
+  </view>
+</view>

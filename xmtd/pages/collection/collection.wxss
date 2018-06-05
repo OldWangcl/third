@@ -1,0 +1,121 @@
+/* pages/collection/collection.wxss */
+.container{
+  margin: 0;
+  padding: 0;
+}
+/*暂无收藏 start */
+.collect{
+  margin-top: 30rpx;
+  font-size: 30rpx;
+}
+/*暂无收藏 end */
+.content{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.line{
+  height: 20rpx;
+  background-color: #DBDCDD;
+}
+.content-wrap{
+  width: 100%;
+  /* height: 300rpx; */
+  display: flex;
+  flex-direction: row;
+  /* border: 1px solid #000; */
+}
+.content-left{
+  margin-top: 20rpx;
+}
+.content-left image{
+  width: 339rpx;
+  height: 223rpx;
+}
+.content-right{
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+}
+.right-top{
+  font-weight: bold;
+  line-height: 60rpx;
+  margin-right: 18rpx;
+  overflow : hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  width: 100%;
+  /* white-space: nowrap; */
+  text-overflow: ellipsis; /*文本缩进*/
+  /* white-space: pre-wrap;
+  -webkit-box-orient:vertical;
+  -webkit-line-break: 2;
+  text-overflow: ellipsis;
+  word-break: break-all;  */
+}
+.right-middle{
+  border-top: 1rpx solid #F0F0F0;
+  margin-right: 30rpx;
+}
+.right-middle{
+  color: #CECFD0;
+  font-size: 28rpx;
+  margin-top: 20rpx;
+  letter-spacing: 2rpx;
+}
+.right-bottom{
+  margin-top: 20rpx;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+}
+.bottom-left{
+  border: 3px solid #BDBEBF;
+  padding: 5rpx 20rpx;
+  background-color: #F5F6F7;
+  border-radius: 10rpx;
+  margin-left: 20rpx;
+  margin-right: 40rpx;
+}
+.bottom-right{
+  border: 3px solid #E21F26;
+  padding: 0 20rpx;
+  background-color: #F5F6F7;
+  border-radius: 10rpx;
+  color: #E21F26;
+  height: 72rpx;
+  line-height: 64rpx;
+  margin-bottom: 4rpx;
+  margin-left: 20rpx;
+}
+/* kf start */
+.kf_button[plain]{
+  /* background-color: #fff; */
+  border: 0px;
+  height: 100rpx;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  margin-bottom: 20rpx;
+}
+.kf_button::after{
+  border: 0px;
+}
+.kf_image{
+  width: 100rpx;
+  height: 120rpx;
+  z-index: 9999;
+  animation: mysecond 3s infinite;
+}
+@keyframes mysecond{
+  0%{
+    transform: translate(0rpx, 0rpx);
+  }
+  50%{
+    transform:translate(-25rpx, 0rpx);
+  }
+  100%{
+    transform: translate(25rpx, 0rpx);
+  }
+}
+/* kf end */

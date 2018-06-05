@@ -1,0 +1,8 @@
+<view class='columu'>
+  <view class='coloum-class' wx:for='{{columnUrls}}' wx:for-item='item' catchtap='onColoumTap' data-tyname='{{item.tyname}}' data-id='{{item.c_typeid}}'>
+      <view class='coloum-tw' >
+        <image src='{{item.img}}' class='img' mode='aspectFill'></image>
+        <text class='text'>{{item.tyname}}</text>
+      </view>
+  </view>
+</view>

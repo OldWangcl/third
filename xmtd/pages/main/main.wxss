@@ -1,0 +1,78 @@
+/* pages/main/main.wxss */
+page{
+   /* background: #607BBB;  */
+}
+/*轮播图 start */
+.swiper{
+  height: 290rpx;
+  margin: 0 20rpx;
+}
+.swiper image{
+  width: 100%;
+  height: 290rpx;
+}
+/*轮播图 end */
+/*广告 start  */
+.ad{
+  margin: 40rpx;
+  border: 1px solid #000;
+  height: 230rpx;
+}
+/*广告 end  */
+/*内容 start  */
+.content{
+  margin: 20rpx;
+  /* border: 1rpx solid #000; */
+  /* height: 600rpx; */
+}
+.content-first{
+  margin-bottom: 20rpx;
+  position: relative;
+}
+.content-img{
+  height: 480rpx;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 30rpx;
+}
+.content-text{
+  background: #000;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  /* margin-top: -112rpx; */
+  width: 100%;
+  opacity: 0.5;
+  height: 100rpx;
+  border-radius: 30rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; /*文本缩进*/
+  margin-bottom: 10rpx;
+}
+.text{
+  line-height: 100rpx;
+  margin-left: 20rpx;
+}
+/*内容 end  */
+/*刷新按钮start  */
+.refresh{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin-right: 22rpx;
+  margin-bottom: 40rpx;
+}
+.refresh-bgc{
+  background-color: #DDDEE2;
+  border-radius: 50%;
+  width: 80rpx;
+  height: 75rpx;
+  opacity: 0.5;
+}
+.refresh-img{
+  width: 80rpx;
+  height: 75rpx;
+}
+/*刷新按钮end */

@@ -1,0 +1,26 @@
+<view class='container'>
+  <view class='collect' wx:if='{{ishidden}}' data-index="{{collectionUrls}}">{{collect}}</view>
+  <view class='content' wx:for='{{collectionUrls}}'>
+    <view class='line'></view>
+    <view class='content-wrap' data-index='{{item.cid}}'>
+      <view class='content-left' catchtap='onMoreTap' data-name='{{item.name}}' data-cid='{{item.cid}}'>
+        <image src='{{item.img}}' mode='aspectFill'></image>
+      </view>
+      <view class='content-right'>
+        <view class='right-top' catchtap='onMoreTap' data-name='{{item.name}}' data-cid='{{item.cid}}'>
+          <text>{{item.name}}</text>
+        </view>
+        <view class='right-middle'>{{item.time}}</view>
+        <view class='right-bottom'>
+          <view class='bottom-left' data-cid='{{item.cid}}' data-index='{{index}}' bindtap='onRemoveTap'>删除</view>
+          <button class='bottom-right' open-type='share' data-name='{{item.name}}'  data-src='{{item.img}}'>分享</button>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!--客服 start  -->
+   <button wx:if='{{kfhidden}}' class='kf_button' plain='true' open-type='contact' >
+      <image class='kf_image' src='../../images/other/kf-01.png'></image>
+    </button>
+  <!--客服 end  -->
+</view>

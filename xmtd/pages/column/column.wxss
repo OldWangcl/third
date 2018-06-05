@@ -1,0 +1,26 @@
+/* pages/column/column.wxss */
+.columu{
+  width: 100%;
+  margin-top: 40rpx;
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+}
+.coloum-class{
+ float: left; 
+ margin-bottom: 60rpx;
+}
+.coloum-tw{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-right: 45rpx;
+}
+.coloum-class .img{
+  width: 306rpx;
+  height: 206rpx;
+  border-radius: 30rpx;
+  margin-bottom: 20rpx;
+}
+.text{
+   text-align: center;
+}

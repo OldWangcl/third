@@ -1,0 +1,49 @@
+<!--pages/main/More/More.wxml-->
+<view class='container'>
+  <view class='wrap'>
+    <text class='text'>{{txt}}</text>
+    <view class='top'>
+      <view class='views'>人气值：{{popular_value}}</view>
+      <view class='time'>{{update_time}}</view>
+    </view>
+    <!--ad start  -->
+  <view class='ad' wx:if='{{hidden}}'>
+    <view class='ad-content'>广告</view>
+  </view>
+  <!--ad end  -->
+  </view>
+  <!--文章内容 start -->
+  <view class='content'>
+    <rich-text nodes="{{contentUrls.contets}}" data-src="{{contentUrls.contets}}" bindtap="onPreviewTap" mode='aspectFit' ></rich-text>
+  </view>
+   <!--文章内容 end -->
+    <!--three 按钮 start -->
+    <view class='full'>
+      <view class='full-text'>- 全文完 -</view>
+      <view class='button'>
+        <view class='button-left button-general' catchtap='onCollectionTap' data-txt='{{contentUrls.txt}}' data-img='{{contentUrls.img}}' data-index='{{contentUrls}}' data-txt='{{contentUrls.txt}}' data-cid='{{contentUrls.cid}}' data-value='{{popular_value}}' data-timeing='{{update_time}}'>收藏</view>
+        <view class='button-middle button-general' bindtap='bindLikeTap'>点赞</view>
+        <button class='button-right button-general' open-type="share" data-img='{{contentUrls.img}}' data-name='{{contentUrls.txt}}'>分享</button>
+      </view>
+    </view>
+    <!--three 按钮 end -->
+  
+  <!--固定按钮  -->
+  <view class='border'>
+    <view class='left'>
+      <view class='left-img'>
+        <image src='../../../images/icon/more.png'></image>
+      </view>
+      <view class='left-text' bindtap='onMoreTap'>
+        <text>更多图文</text>
+      </view>
+      <view class='left-line'></view>
+    </view>
+    <view class='right'>
+      <view class='right-img'>
+        <image src='../../../images/icon/forwarding.png'></image>
+      </view>
+      <button class='right-text' open-type='share'>分享好友</button>
+    </view>
+  </view>
+</view>
